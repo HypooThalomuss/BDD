@@ -1,2 +1,0 @@
-# BDD
-Software Engineering Project
