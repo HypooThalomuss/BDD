@@ -43,9 +43,41 @@ h2 {
 	border: 2px solid #A487FF;
 }
 
+.submitbutton {
+	background-color: #6A45D9;
+	color: white;
+	padding: 20px 20px;
+	display: block;
+	font-family: "Roboto", sans-serif;
+	margin: 15px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-size: 16px;
+	border: 2px solid #A487FF;
+	text-align: center;
+	width: 200px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 .buttontype1:hover{
 	background-color: #442D8A;
 	color: white;
+}
+
+.submitbutton:hover{
+	background-color: #442D8A;
+	color: white;
+}
+
+.loginfield {
+	display: block;
+	padding-bottom: 10px;
+}
+
+.bigolblock{
+	margin-top: 10px;
 }
 
 a {
