@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<body>
+		<form onSubmit="closePage()">
+			<label for="action">Action:</label>
+			<select name="action" id="action">
+				<option value="add">Add quantity</option>
+				<option value="subtract">Subtract quantity</option>
+				<option value="update">Update quantity</option>
+			</select>
+			
+			<br><br>
+			
+			<label for="amount">Amount:</label>
+			<input type="text" id="amount" name="amount">
+			
+			<br><br>
+			
+			<input type="submit" value="submit">
+		</form>
+		<script>
+			function closePage() {
+				window.close();
+			}
+		</script>
+	</body>
+</html>

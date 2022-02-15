@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<!--page title-->
+		<title>Product List</title>
+		<!--css-->
+		<link rel="stylesheet" type="text/css" charset="utf-8" href="inventory_fp_css.css">
+		<!--Google Fonts-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	</head>
+	<body>
+		<div class = "block">
+		
+		<h1>Product List</h1>
+		
+		<hr>
+		
+		<h2>Tide Detergent</h2>
+		<p>
+			Department: cleaning products<br>
+			Location: aisle 12<br>
+			Price: $10.99
+		</p>
+		<button class="buttontype2" onclick="changeQuantity()">
+			Change Quantity
+		</button>
+		
+		<hr>
+		
+		<h2>Clorox Bleach</h2>
+		<p>
+			Department: cleaning products<br>
+			Location: aisle 12<br>
+			Price: $6.99
+		<p>
+		<button class="buttontype2" onclick="changeQuantity()">
+			Change Quantity
+		</button>
+		</div>
+		
+		<!--code taken from https://www.geeksforgeeks.org/html-window-alert-method/ -->
+		<script>
+			function changeQuantity() {
+            			window.open("quantity_form.html", "change quantity", "width=400,height=125");
+        		}
+		</script>
+	</body>
+</html>
