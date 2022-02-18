@@ -23,25 +23,45 @@
 				<!--username-->
 				<input type = "text" name = "username" id = "entered_name" class = "login_field" placeholder = "Username" required>
 				</div>
+				
 				<div class = "loginfield">
 				<!--password-->
-				<input type = "text" name = "password" id = "entered_password" class = "login_field" placeholder = "Password" required>
+				<input type = "password" name = "password" id = "entered_password" class = "login_field" placeholder = "Password" required>
 				</div>
+				
 				<div class = "loginfield">
 				<!--confirm password-->
-				<input type = "text" name = "password" id = "entered_password" class = "login_field" placeholder = "Confirm Password" required>
+				<input type = "password" name = "password" id = "entered_password" class = "login_field" placeholder = "Confirm Password" required>
 				</div>
+				
+				<!--Security Question-->
+				<div class = "loginfield">
+				<label for="securityQuestion">Choose a security question: </label>
+				<select id="securityQuestion" name="securityQuestion">
+					<option value="What is the name of a college you applied to but did not attend?"</option>
+					<option value="What was the name of the first school you remember attending?"</option>
+					<option value="What was the destination of your most memorable school field trip?"</option>
+					<option value="What was the last name of your 8th grade math teacher?"</option>
+					<option value="What was the name of your first stuffed toy?"</option>
+					<option value="What was your driving instructor's first name?"</option>
+				</select>
+				<!--Questions taken from https://cheatsheetseries.owasp.org/cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html-->
+					
+				<!--Security Answer-->
+				<div class = "loginfield">
+				<label for="securityAnswer">Answer to Security Question: </label>	
+				<input type="text" name="secrityAnswer" id="securityAnswer" required>
 			
-			<p>Choose User Type:</p>
-			<!--select user type-->
-			<input type="radio" id="usertype1" name="usertype" value="Customer">
-			<label for="usertype1"> Customer</label><br>
+				<p>Choose User Type:</p>
+				<!--select user type-->
+				<input type="radio" id="usertype1" name="usertype" value="Customer">
+				<label for="usertype1"> Customer</label><br>
 			
-			<input type="radio" id="usertype2" name="usertype" value="Employee">
-			<label for="usertype2"> Employee</label><br>
+				<input type="radio" id="usertype2" name="usertype" value="Employee">
+				<label for="usertype2"> Employee</label><br>
 			
-			<input type="radio" id="usertype3" name="usertype" value="Administrator">
-			<label for="usertype1"> Administrator</label><br>
+				<input type="radio" id="usertype3" name="usertype" value="Administrator">
+				<label for="usertype1"> Administrator</label><br>
 			</form>
 			<div class = "bigolblock">
 				<p></p>
