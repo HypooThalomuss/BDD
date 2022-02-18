@@ -88,3 +88,9 @@ h2 {
 a {
 	font-family: "Roboto", sans-serif;
 }
+
+/*code for the hr tag taken from https://www.w3schools.com/howto/howto_css_style_hr.asp*/
+hr {
+	width: 98%;
+	border: 1px solid grey;
+}
