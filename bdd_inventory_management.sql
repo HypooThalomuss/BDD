@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2022 at 08:51 PM
+-- Generation Time: Mar 02, 2022 at 05:05 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -62,20 +62,9 @@ CREATE TABLE `users` (
   `LastName` varchar(20) NOT NULL,
   `Username` varchar(20) NOT NULL,
   `Password` varchar(30) NOT NULL,
-  `Type` int(2) NOT NULL,
+  `Type` varchar(20) NOT NULL,
   `Question` varchar(50) NOT NULL,
   `Answer` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `usertypes`
---
-
-CREATE TABLE `usertypes` (
-  `UserTypeID` int(2) NOT NULL,
-  `Type` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -104,12 +93,6 @@ ALTER TABLE `users`
   ADD KEY `Type` (`Type`);
 
 --
--- Indexes for table `usertypes`
---
-ALTER TABLE `usertypes`
-  ADD PRIMARY KEY (`UserTypeID`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -132,12 +115,6 @@ ALTER TABLE `users`
   MODIFY `UserID` int(6) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `usertypes`
---
-ALTER TABLE `usertypes`
-  MODIFY `UserTypeID` int(2) NOT NULL AUTO_INCREMENT;
-
---
 -- Constraints for dumped tables
 --
 
@@ -147,12 +124,6 @@ ALTER TABLE `usertypes`
 ALTER TABLE `transactions`
   ADD CONSTRAINT `transactions_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`),
   ADD CONSTRAINT `transactions_ibfk_2` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ProductID`);
-
---
--- Constraints for table `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`Type`) REFERENCES `usertypes` (`UserTypeID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
