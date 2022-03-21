@@ -18,7 +18,7 @@
             String last = request.getParameter("lastName");
             String user = request.getParameter("username");
             String password = request.getParameter("password");
-            String question = request.getParameter(securityQuestion");
+            String question = request.getParameter("securityQuestion");
             String answer = request.getParameter("securityAnswer");
             String type = request.getParameter("usertype");
             
