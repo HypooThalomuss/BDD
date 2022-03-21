@@ -22,7 +22,7 @@
             String answer = request.getParameter("securityAnswer");
             String type = request.getParameter("usertype");
             
-            String sql = "insert into student values (0, '" + first + "', '" + last + "',"
+            String sql = "insert into users values (0, '" + first + "', '" + last + "',"
                     + "'" + user + "', '" + password + "', '" + question + "', '" + answer + "', '" + type + "')";
             out.print("<h2>" + sql + "</h2>");
             
