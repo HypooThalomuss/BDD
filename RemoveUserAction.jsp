@@ -13,7 +13,7 @@
     </head>
     <body>
         <%
-            String id = request.getParameter("itemID");
+            String userId = request.getParameter("userId");
             
             String sql = "delete from users where UserID='" + userId + "'";
             out.print("<h2>" + sql + "</h2>");
