@@ -1,95 +1,97 @@
 <!DOCTYPE html>
 <html lang = "en">
-	<head>
-		<!--name of page (may change idk)-->
-		<title>BDD Inventory Management System</title>
-		<!--CSS-->
-		<link rel="stylesheet" type="text/css" charset="utf-8" href=inventory_fp_css.css>
-		<!--Google Font-->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-	</head>
-	<body>
-		<center>
-			<div class = "block">
-				<h1>BDD Inventory</h1>
-				<h2>Create An Account:</h2>
+    <head>
+	<!--name of page (may change idk)-->
+	<title>BDD Inventory Management System</title>
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" charset="utf-8" href=inventory_fp_css.css>
+	<!--Google Font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    </head>
+    <body>
+        <center>
+            <div class = "block">
+		<h1>BDD Inventory</h1>
+		<h2>Create An Account:</h2>
 			
-				<div class = "bigolblock">
-				</div>
+		<div class = "bigolblock">
+		</div>
 			
-				<!--login form-->
-				<form name="registerUser" action = "registerUserAction.jsp" >
-					<div class = "loginfield">
-						<!--First name-->
-						<label for="firstName">First Name: </label>	
-						<input type = "text" name = "firstName" id = "firstName" class = "login_field" placeholder = "John" required>
-					</div>
+		<!--login form-->
+		<form name="registerUser" action = "registerUserAction.php" >
+                    <div class = "loginfield">
+                    <!--First name-->
+                        <label for="firstName">First Name: </label>	
+                        <input type = "text" name = "firstName" id = "firstName" class = "login_field" placeholder = "John" required>
+                    </div>
 					
-					<div class = "loginfield">
-						<!--Last name-->
-						<label for="lastName">Last Name: </label>	
-						<input type = "text" name = "lastName" id = "lastName" class = "login_field" placeholder = "Doe" required>
-					</div>
+                    <div class = "loginfield">
+		    <!--Last name-->
+                        <label for="lastName">Last Name: </label>	
+                        <input type = "text" name = "lastName" id = "lastName" class = "login_field" placeholder = "Doe" required>
+		    </div>
 					
-					<div class = "loginfield">
-						<!--username-->
-						<label for="username">Username: </label>	
-						<input type = "text" name = "username" id = "username" class = "login_field" placeholder = "JohnDoe123" required>
-					</div>
+		    <div class = "loginfield">
+		    <!--username-->
+                        <label for="username">Username: </label>	
+                        <input type = "text" name = "username" id = "username" class = "login_field" placeholder = "JohnDoe123" required>
+	      	    </div>
 				
-					<div class = "loginfield">
-						<!--password-->
-						<label for="password">Password: </label>
-						<input type = "password" name = "password" id = "password" class = "login_field" placeholder = "Password" required>
-					</div>
+                    <div class = "loginfield">
+			<!--password-->
+			<label for="password">Password: </label>
+			<input type = "password" name = "password" id = "password" class = "login_field" placeholder = "Password" required>
+   		    </div>
 				
-					<div class = "loginfield">
-						<!--confirm password-->
-						<label for="passwordConfirm">Confirm Password: </label>
-						<input type = "password" name = "passwordConfirm" id = "passwordConfirm" class = "login_field" placeholder = "Confirm Password" required>
-					</div>
+		    <div class = "loginfield">
+			<!--confirm password-->
+			<label for="passwordConfirm">Confirm Password: </label>
+			<input type = "password" name = "passwordConfirm" id = "passwordConfirm" class = "login_field" placeholder = "Confirm Password" required>
+	            </div>
 				
-					<!--Security Question-->
-					<div class = "loginfield">
-						<label for="securityQuestion">Choose a security question: </label>
-						<select id="securityQuestion" name="securityQuestion">
-							<option value="1">What is the name of a college you applied to but did not attend?</option>
-							<option value="2">What was the name of the first school you remember attending?</option>
-							<option value="3">What was the destination of your most memorable school field trip?</option>
-							<option value="4">What was the last name of your 8th grade math teacher?</option>
-							<option value="5">What was the name of your first stuffed toy?</option>
-							<option value="6">What was your driving instructor's first name?</option>
-						</select>
-						<!--Questions taken from https://cheatsheetseries.owasp.org/cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html-->
-					</div>
+		    <!--Security Question-->
+		    <div class = "loginfield">
+ 			<label for="securityQuestion">Choose a security question: </label>
+			<select id="securityQuestion" name="securityQuestion">
+			    <option value="1">What is the name of a college you applied to but did not attend?</option>
+			    <option value="2">What was the name of the first school you remember attending?</option>
+			    <option value="3">What was the destination of your most memorable school field trip?</option>
+			    <option value="4">What was the last name of your 8th grade math teacher?</option>
+			    <option value="5">What was the name of your first stuffed toy?</option>
+			    <option value="6">What was your driving instructor's first name?</option>
+		        </select>
+			<!--Questions taken from https://cheatsheetseries.owasp.org/cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html-->
+		    </div>
 					
-					<!--Security Answer-->
-					<div class = "loginfield">
-						<label for="securityAnswer">Answer to Security Question: </label>	
-						<input type="text" name="secrityAnswer" id="securityAnswer" required>
-					</div>
+			<!--Security Answer-->
+	            <div class = "loginfield">
+                    	<label for="securityAnswer">Answer to Security Question: </label>	
+			<input type="text" name="securityAnswer" id="securityAnswer" required>
+		    </div>
 					
-					<p>Choose User Type:</p>
-					<!--select user type-->
-						<input type="radio" id="usertype1" name="usertype" value="Customer">
-						<label for="usertype1"> Customer</label><br>
+		    <p>Choose User Type:</p>
+		    <!--select user type-->
+	            <input type="radio" id="usertype1" name="usertype" value="Customer">
+		    <label for="usertype1"> Customer</label><br>
 			
-						<input type="radio" id="usertype2" name="usertype" value="Employee">
-						<label for="usertype2"> Employee</label><br>
+		    <input type="radio" id="usertype2" name="usertype" value="Employee">
+		    <label for="usertype2"> Employee</label><br>
 			
-						<input type="radio" id="usertype3" name="usertype" value="Administrator">
-						<label for="usertype1"> Administrator</label><br>
+		    <input type="radio" id="usertype3" name="usertype" value="Administrator">
+		    <label for="usertype1"> Administrator</label><br>
 				
-					<!--Submit button-->
-					<input type="submit" class = "submitbutton" value="SUBMIT">
-					<!--Back Button-->
-					<a class = "submitbutton" href = "index.html">BACK</a>
-				</form>
-				
-				<div class = "bigolblock">
-					<p></p>
-				</div>
-			</div>
-		</center>
-	</body>
+		    <!--Submit button-->
+		    <input type="submit" class = "submitbutton" value="SUBMIT">
+		    <!--Back Button-->
+		    <a class = "submitbutton" href = "index.html">BACK</a>
+		</form>
+		<?php
+                    // put your code here
+                ?>
+		<div class = "bigolblock">
+                    <p></p>
+		</div>
+            </div>
+	</center>
+    </body>
 </html>
