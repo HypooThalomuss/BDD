@@ -43,11 +43,6 @@ h2 {
 	border: 2px solid #A487FF;
 }
 
-.buttontype2 {
-	width: 120px;
-	height: 20px;
-}
-
 .submitbutton {
 	background-color: #6A45D9;
 	color: white;
@@ -85,12 +80,11 @@ h2 {
 	margin-top: 10px;
 }
 
+
+
 a {
 	font-family: "Roboto", sans-serif;
 }
-
-/*code for the hr tag taken from https://www.w3schools.com/howto/howto_css_style_hr.asp*/
-hr {
-	width: 98%;
-	border: 1px solid grey;
+.totheright{
+	text-align: right;
 }
