@@ -3,8 +3,8 @@
 function openConn() {
 
   $servername = "localhost";
-  $username = "mahadev";
-  $password = "mahadev";
+  $username = "Mahadev";
+  $password = "Mahadev";
   $dbname = "bookstore";
 
 // Create connection
