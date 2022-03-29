@@ -4,7 +4,7 @@ function openConn() {
 
   $servername = "localhost";
   $username = "Mahadev";
-  $password = "Mahadev";
+  $password = "mahadev";
   $dbname = "bookstore";
 
 // Create connection
