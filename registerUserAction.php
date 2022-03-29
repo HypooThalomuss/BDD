@@ -2,8 +2,6 @@
 
     include 'DBConnect.php';
 
-
-    
     // prepare and bind
     try {
         $sql = "INSERT INTO users (UserID, FirstName, LastName, Username, Password, Type, Question, Answer) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
@@ -24,7 +22,6 @@
         if($passWord != $passConfirm){
             die("Password and Confirm Password fields do not match!");
          }
-
 
         $stmt->execute();
         $stmt->close();
