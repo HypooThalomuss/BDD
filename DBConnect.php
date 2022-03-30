@@ -1,3 +1,5 @@
+//Code from the DBConnect file that Dr. Mahadev posted on Blackboard
+
 <?php
 
 function openConn() {
