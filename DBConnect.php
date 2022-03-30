@@ -7,7 +7,7 @@ function openConn() {
   $servername = "localhost";
   $username = "mahadev";
   $password = "mahadev";
-  $dbname = "bdd inventory management";
+  $dbname = "bdd_inventory_management";
 
 // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
