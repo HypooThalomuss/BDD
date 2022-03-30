@@ -4,10 +4,10 @@
 
     // prepare and bind
     try {
-        $sql = "INSERT INTO products (ProductID, Name, Location, Amount, Price,) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO products (Name, Location, Amount, Price,) VALUES (?, ?, ?, ?)";
         $conn = openConn();
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssss", $itemName, $itemLocation, $itemAmount, $itemPrice);
+        $stmt->bind_param($itemName, $itemLocation, $itemAmount, $itemPrice);
 
         $itemName = $_GET["itemName"];
         $itemLocation = $_GET["itemLocation"];
