@@ -4,10 +4,10 @@
 
     // prepare and bind
     try {
-        $sql = "INSERT INTO users (UserID, FirstName, LastName, Username, Password, Type, Question, Answer) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (FirstName, LastName, Username, Password, Type, Question, Answer) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $conn = openConn();
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssss", $first, $last, $user, $passWord, $type, $question, $answer);
+        $stmt->bind_param($first, $last, $user, $passWord, $type, $question, $answer);
 
         //Get form data
         $first = $_POST["firstName"];
