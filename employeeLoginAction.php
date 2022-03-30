@@ -1,8 +1,8 @@
 <?php
 
 //get the form data
-$userkey = $_GET["uname"];
-$passkey = $_GET["pass"];
+$userkey = $_POST["uname"];
+$passkey = $_POST["pass"];
 
 //connect to the database
 $servername = "localhost";
