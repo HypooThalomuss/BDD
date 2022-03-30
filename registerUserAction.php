@@ -10,14 +10,14 @@
         $stmt->bind_param("sssss", $first, $last, $user, $passWord, $type, $question, $answer);
 
         //Get form data
-        $first = $_GET["firstName"];
-        $last = $_GET["lastName"];
-        $user = $_GET["username"];
-        $passWord = $_GET["password"];
-        $passConfirm = $_GET["passwordConfirm"];
-        $type = $_GET["usertype"];
-        $question = $_GET["securityQuestion"];
-        $answer = $_GET["securityAnswer"];
+        $first = $_POST["firstName"];
+        $last = $_POST["lastName"];
+        $user = $_POST["username"];
+        $passWord = $_POST["password"];
+        $passConfirm = $_POST["passwordConfirm"];
+        $type = $_POST["usertype"];
+        $question = $_POST["securityQuestion"];
+        $answer = $_POST["securityAnswer"];
     
         if($passWord != $passConfirm){
             die("Password and Confirm Password fields do not match!");
