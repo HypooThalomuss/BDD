@@ -18,17 +18,22 @@
 			</div>
 			
 			<!--login form-->
-			<form action = "https://www.google.com/?gws_rd=ssl" method = "get">
+			<form action = "customer_loginAction.php" method = "POST">
 				<div class = "loginfield">
 				<!--username-->
 				<label for = "username">Username: </label>
-				<input type = "text" name = "username" id = "entered_name" class = "login_field" placeholder = "Username">
+				<input type = "text" name = "username" id = "entered_name" class = "login_field" placeholder = "Username" required>
 				</div>
 				<div class = "loginfield">
 				<!--password-->
 				<label for = "password">Password: </label>
-				<input type = "password" name = "password" id = "entered_password" class = "login_field" placeholder = "Password">
+				<input type = "password" name = "password" id = "entered_password" class = "login_field" placeholder = "Password" required>
 				</div>
+                            <!--Submit button-->
+			<input type="submit" class = "submitbutton" value="SUBMIT">
+			<!--<a class = "submitbutton" href = "employee_product_list.html">SUBMIT</a>-->
+			<!--Back Button-->
+			<a class = "submitbutton" href = "https://hypoothalomuss.github.io/BDD/">BACK</a>
 			</form>
 			<div class = "bigolblock">
 				<p></p>
@@ -36,9 +41,7 @@
 			<!--Forgot Password-->
 			<p><a href="forgotPasswordUsernamePrompt.html">Forgot Password? Click Here!</a></p>
 			<!--Submit button-->
-			<a class = "submitbutton" href = "employee_product_list.html">SUBMIT</a>
-			<!--Back Button-->
-			<a class = "submitbutton" href = "https://hypoothalomuss.github.io/BDD/">BACK</a>
+                        
 			</div>
 		</center>
 	</body>
