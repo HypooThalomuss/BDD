@@ -23,6 +23,11 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+
+    //Check to make sure passwords are the same
+    if ($passWord != $passConfirm) {
+        die("Passwords do not match!");
+    }    
     
     //Create SQL Statement
     $sql = "INSERT INTO users (UserID, FirstName, LastName, Username, Password, Type, Question, Answer) VALUES ('0', '$first', '$last', '$user', '$passWord', '$type', '$question', '$answer')";
