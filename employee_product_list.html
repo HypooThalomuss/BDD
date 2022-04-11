@@ -25,9 +25,10 @@
 			Price: $10.99<br>
 			In Stock: 23
 		</p>
-		<button class="buttontype2" onclick="changeQuantity()">
-			Change Quantity
-		</button>
+                <form action="changeQuantity.php">
+                    <input type="text" name="productID" value="1" readonly hidden>
+                    <input type="submit" value="Change Quantity" class="buttontype2">
+                </form>
 		
 		<hr>
 		
@@ -38,9 +39,10 @@
 			Price: $6.99<br>
 			In Stock: 31
 		<p>
-		<button class="buttontype2" onclick="changeQuantity()">
-			Change Quantity
-		</button>
+		<form action="changeQuantity.php">
+                    <input type="text" name="productID" value="2" readonly hidden>
+                    <input type="submit" value="Change Quantity" class="buttontype2">
+                </form>
 		<hr>
 		
 		<p>
@@ -56,3 +58,4 @@
 		</script>
 	</body>
 </html>
+
