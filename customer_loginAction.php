@@ -1,38 +1,43 @@
 <?php
 
-    
-    //Get form data
-    $first = $_GET["firstName"];
-    $last = $_GET["lastName"];
-    $user = $_GET["username"];
-    $passWord = $_GET["password"];
-    $passConfirm = $_GET["passwordConfirm"];
-    $type = $_GET["usertype"];
-    $question = $_GET["securityQuestion"];
-    $answer = $_GET["securityAnswer"];
-    
-    //Connect to the database
-    $servername = "localhost";
-    $username = "mahadev";
-    $password = "mahadev";
-    $dbname = "bdd_inventory_management";
+//get the form data
+$userkey = $_GET["uname"];
+$passkey = $_GET["pass"];
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    
-    //Create SQL Statement
-    $sql = "INSERT INTO users (UserID, FirstName, LastName, Username, Password, Type, Question, Answer) VALUES ('0', '$first', '$last', '$user', '$passWord', '$type', '$question', '$answer')";
-    
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "New user added successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+//connect to the database
+$servername = "localhost";
+$username = "mahadev";
+$password = "mahadev";
+$dbname = "bdd_inventory_management";
 
-    $conn->close();
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+echo "$userkey $passkey ";
+//generate an SQL statement and send it to the database
+$sql = "SELECT Username FROM users WHERE Username = '$userkey' AND Password = '$passkey'";
+$result = mysqli_query($conn,$sql);
+$count = mysqli_num_rows($result);
+//$result = $conn->query($sql);
+//$type = gettype($result);
+echo "$type ";
+
+//check if credentials are correct and link to appropriate page
+if ($count > 0) {
+  // username and password are correct
+  echo "at least 1 result ";
+  header("Location: employee_product_list.html");
+ }
+ else {
+  // username and/or password are incorrect
+   echo "0 results ";
+   header("Location: login_customer.html");
+}
+
+
+$conn->close();
 ?>
