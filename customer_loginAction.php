@@ -30,12 +30,12 @@ if ($count > 0) {
 
   // username and password are correct
   //echo "Login Sucessful";
-  header("Location: employee_product_list.html");
+  header("Location: employee_product_list.html?error=none");
  }
  else {
   // username and/or password are incorrect
    //echo "Login failed";
-   header("Location: login_customer.html");
+   header("Location: login_customer.php?error=123");
 }
 
 
