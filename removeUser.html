@@ -13,12 +13,15 @@
 	<div class="block">
             <center>
 		<h1>Remove User From Database:</h1>
-		<!--A form which when submitted removes an item from the "products" table of the database-->
+		<!--A form which when submitted removes a user from the "users" table of the database-->
 		<!--Must include input-->
 			
 		<form name="removeUser" action="removeUserAction.php">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required><br>
+		
+                    <label for="adminID">Enter Your Administrator ID:</label>
+                    <input type="text" id="adminID" name="adminID" required><br>
 		
                     <!--Submit button-->
                     <input type="submit" class = "submitbutton" value="SUBMIT">
@@ -29,6 +32,9 @@
         </div>
     </body>
 </html>	
+
+
+
 
 
 
