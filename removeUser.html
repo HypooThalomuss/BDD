@@ -2,29 +2,33 @@
 
 <html lang="en">
     <head>
-		    <meta charset="UTF-8">
-		    <title>Remove User</title>
-		    <!--CSS-->
-		    <link rel="stylesheet" type="text/css" charset="utf-8" href=inventory_fp_css.css>
-		    <!--Google Fonts-->
-		    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-	  </head>
-	  <body>
-		    <div class="block">
-    			  <center>
-		    		    <h1>Remove User:</h1>
+        <meta charset="UTF-8">
+    	<title>Remove User From Database</title>
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" charset="utf-8" href=inventory_fp_css.css>
+        <!--Google Fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    </head>
+    <body>
+	<div class="block">
+            <center>
+		<h1>Remove User From Database:</h1>
+		<!--A form which when submitted removes an item from the "products" table of the database-->
+		<!--Must include input-->
 			
-				        <form name="removeUser" action="removeUserAction.php">
-				        	  <label for="userId">User ID:</label>
-					          <input type="text" id="userId" name="userId" required><br>
-					
-    					      <!--Submit button-->
-		    			      <input type="submit" class = "submitbutton" value="SUBMIT">
-					
-	  		      		  <!--Back Button-->
-		  		      	  <a class = "submitbutton" href = "admin_FunctionSelect.html">BACK</a>
-    			  	  </form>	
-		    	  </center>
-		    </div>
-	  </body>
+		<form name="removeUser" action="removeUserAction.php">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+		
+                    <!--Submit button-->
+                    <input type="submit" class = "submitbutton" value="SUBMIT">
+                    <!--Back Button-->
+                    <a class = "submitbutton" href = "admin_FunctionSelect.html">BACK</a>
+		</form>
+            </center>
+        </div>
+    </body>
 </html>	
+
+
+
