@@ -24,18 +24,29 @@ $result = $conn->query($sql);
 $type = gettype($result);
 echo "$type ";
 
+
+
 //check if credentials are correct and link to appropriate page
-if ($result->num_rows > 0) {
-  // username and password are correct
-  echo "at least 1 result ";
-  header("Location: employee_function_select.html");
+if ($result->num_rows == 0) {
+     // username and password are incorrect
+     header("Location: employeeLogin.php?error=123");
  }
  else {
-  // username and/or password are incorrect
-   echo "0 results ";
-   header("Location: login.html");
+     //username and password are correct
+     
+     //store the first row of results
+     $row = $result->fetch_assoc();
+     if ($row['Type'] == 'employee') {
+         //account user type is correct
+         header("Location: employee_function_select.html");
+     }
+     else {
+         //account user type is incorrect
+         header("Location: employeeLogin.php?error=userType");
+     }
 }
 
 
 $conn->close();
 ?>
+
