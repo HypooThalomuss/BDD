@@ -1,22 +1,17 @@
 //Code from the DBConnect file that Dr. Mahadev posted on Blackboard
 
 <?php
+    //Code from the DBConnect file that Dr. Mahadev posted on Blackboard
+    $servername = "localhost";
+    $username = "Mahadev";
+    $password = "mahadev";
+    $dbname = "bdd_inventory_management";
 
-function openConn() {
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-  $servername = "localhost";
-  $username = "mahadev";
-  $password = "mahadev";
-  $dbname = "bdd_inventory_management";
-
-// Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-  return $conn;
-}
-
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 ?>
