@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    	<title>Change Item Price</title>
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" charset="utf-8" href=inventory_fp_css.css>
+        <!--Google Fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    </head>
+    <body>
+	<div class="block">
+            <center>
+		<h1>Change Price:</h1>
+		<!--A form which when submitted changes an item's price in
+                    the "products" table of the database.-->
+			
+		<form name="changePrice" action="changePriceAction.php">
+                    <label for="itemName">Item Name:</label>
+                    <input type="text" id="itemName" name="itemName" required><br>
+	
+                    <label for="newPrice">New Price: $</label>
+                    <input type="text" id="newPrice" name="newPrice" required><br>
+                    
+                    <label for="adminName">Enter Your Administrator username to perform this action:</label>
+                    <input type="text" id="adminName" name="adminName" required><br> 
+                    
+                    <!--Submit button-->
+                    <input type="submit" class = "submitbutton" value="SUBMIT">
+                    <!--Back Button-->
+                    <a class = "submitbutton" href = "admin_FunctionSelect.html">BACK</a>
+		</form>
+            </center>
+        </div>
+    </body>
+</html>	
+
+
