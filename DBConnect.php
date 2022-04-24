@@ -1,7 +1,6 @@
 //Code from the DBConnect file that Dr. Mahadev posted on Blackboard
 
 <?php
-    //Code from the DBConnect file that Dr. Mahadev posted on Blackboard
     $servername = "localhost";
     $username = "Mahadev";
     $password = "mahadev";
