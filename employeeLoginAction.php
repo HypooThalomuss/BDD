@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 
 echo "$userkey $passkey ";
 //generate an SQL statement and send it to the database
-$sql = "SELECT Username FROM users WHERE Username = '$userkey' AND Password = '$passkey'";
+$sql = "SELECT Type FROM users WHERE Username = '$userkey' AND Password = '$passkey'";
 $result = $conn->query($sql);
 $type = gettype($result);
 echo "$type ";
