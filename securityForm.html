@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+	<title>Security Form</title>
+        <!--CSS-->
+	<link rel="stylesheet" type="text/css" charset="utf-8" href=inventory_fp_css.css>
+	<!--Google Fonts-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    </head>
+    <body>
+	<!--Ask user for username -->
+        <div class = "block">
+            <center>
+		<h1>Enter Your Security Information</h1>
+		<form name="securityForm" action="securityFormAction.Php">
+                    
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+                        
+                    <!--Security Question-->
+                    <div class = "loginfield">
+                        <label for="securityQuestion">What was your security question?: </label>
+                        <select id="securityQuestion" name="securityQuestion">
+                            <option value="1">What is the name of a college you applied to but did not attend?</option>
+                            <option value="2">What was the name of the first school you remember attending?</option>
+                            <option value="3">What was the destination of your most memorable school field trip?</option>
+                            <option value="4">What was the last name of your 8th grade math teacher?</option>
+                            <option value="5">What was the name of your first stuffed toy?</option>
+                            <option value="6">What was your driving instructor's first name?</option>
+                        </select>
+                    <!--Questions taken from https://cheatsheetseries.owasp.org/cheatsheets/Choosing_and_Using_Security_Questions_Cheat_Sheet.html-->
+                    </div>
+					
+                    <!--Security Answer-->
+                    <div class = "loginfield">
+                        <label for="securityAnswer">Answer your Security Question: </label>	
+                        <input type="text" name="securityAnswer" id="securityAnswer" required>
+                    </div>
+						
+                    <!--Submit button-->
+                    <input type="submit" class = "submitbutton" value="SUBMIT">
+     		</form>  
+            </center>
+   	</div>
+    </body>
+</html>  
