@@ -30,7 +30,7 @@ if ($count > 0) {
 
   // username and password are correct
   //echo "Login Sucessful";
-  header("Location: employee_product_list.php?error=none");
+  header("Location: BDD_ProductPage.php?error=none");
  }
  else {
   // username and/or password are incorrect
