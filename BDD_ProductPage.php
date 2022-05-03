@@ -15,36 +15,43 @@
         
         <div class ="block">
          
-         <!--searchbar-->
-         <form action ="BDD_ProductResults.php" method="POST">
-             <input type="text" name="search" placeholder="Search">
-             <button type="submit" name="submit-search">SUBMIT</button>
-         </form>
-         <!--searchbar end-->
          
          
          <!--shows initial product list-->
-         <h1>Welcome to BDD Inventory Management!</h1>
+         <center><h1>Welcome to BDD Inventory Management!</h1>
+	 <!--searchbar-->
+	 
+         <form action ="BDD_ProductResults.php" method="POST">
+             <input type="text" name="search" placeholder="Search">
+             <button type="submit" name="submit-search"><i class="fa fa-search"></i></button>
+         </form>
+	
+         <!--searchbar end-->
+	 </center>
          
-         <div class="product-list">
+       
              <?php
              include "BDD_DB_Connect.php";
              $sql = "SELECT * FROM products";
              $result = mysqli_query($conn, $sql);
              $queryResults = mysqli_num_rows($result);
-             
+             ?>
+	 <div class="productlist">
+	 <table><tr> <?php $cssFile="inventory_fp_css.css";
+	 echo "<link rel='stylesheet' type='text/css' charset='utf-8' href=inventory_fp_css.css>";
              if ($queryResults > 0) {
-                 while ($row = mysqli_fetch_assoc($result)) {
+		     while ($row = mysqli_fetch_assoc($result)) { ?><td><div class="item"><?php
                      echo "<div><p>ID: ".$row['ProductID']."</p>
                                 <p>Name: ".$row['Name']."</p>
                                 <p>Amount: ".$row['Amount']."</p>
                                 <p>Location: ".$row['Location']."</p>
                                 <p>Price: ".$row['Price']."</p>
                             </div>";
-                 }
+		     } ?></div><?php
              }
-             ?>
-         </div>
+	     ?></td>
+		 </tr>
+	 </table></div>
           <!--end of initial product list-->  
             
           
