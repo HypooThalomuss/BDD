@@ -1,6 +1,5 @@
 body {
-	font-family: "Roboto", sans-serif;
-	background-color: #371E57
+	background-color: #371E57;
 }
 
 h1 {
@@ -16,8 +15,6 @@ h2 {
 
 .block {
 	background-color: #F7F7F7;
-	display: flex;
-	flex-direction: column;
 	width: 90%;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -26,7 +23,7 @@ h2 {
 	border-radius: 4px;
 	padding-top: 5px;
 	padding-bottom: 50px;
-	float: center;
+	
 }
 
 .buttontype1 {
@@ -41,6 +38,7 @@ h2 {
 	text-decoration: none;
 	font-size: 20px;
 	border: 2px solid #A487FF;
+	text-align: center;
 }
 
 .buttontype2 {
@@ -86,10 +84,41 @@ h2 {
 }
 
 
-
 a {
 	font-family: "Roboto", sans-serif;
+
 }
-.totheright{
-	text-align: right;
+.searchbar{
+	text-align: center;
+}
+
+.error {
+	color: red;
+	font-family: 'Roboto', sans-serif;
+}
+
+.productlist {
+	font-family: 'Roboto', sans-serif;
+}
+
+label {
+	font-family: 'Roboto', sans-serif;
+}
+
+.center {
+	text-align: center;
+}
+
+.item {
+	margin: 20px;
+	background-color: white;
+	border-radius: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-style: solid;
+	border-color: #6f4d7d;
+	border-width: 2px;
+	width: 80%;
 }
