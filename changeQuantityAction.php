@@ -56,6 +56,6 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-header("Location: employee_product_list.html");
+header("Location: employee_product_list.php");
 
 ?>
